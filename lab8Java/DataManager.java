@@ -1,12 +1,12 @@
-import java.io.IOException;
-import java.nio.file.Files;
+import java.io.IOException; 
+import java.nio.file.Files; //для работы с файловой системой 
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayList; //для хранения данных
+import java.util.List; //для того чтобы оброботчики были в виде коллекции 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit; //для работы с временными интервалами 
 
 
  //DataManager класс отвечает за управление данными:
