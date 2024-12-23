@@ -5,8 +5,6 @@ import java.util.stream.Collectors;
 public class AggregateProcessor {
 
     //Метод с аннотацией @DataProcessor, который выполняет объединение данных.
-     // @param data исходный список строк.
-     //@return список с одной строкой, представляющей объединение всех строк.
 
     @DataProcessor
     public List<String> aggregateData(List<String> data) {
