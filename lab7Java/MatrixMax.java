@@ -10,7 +10,7 @@ public class MatrixMax {
                 {4, 6, 7}
         };
 
-        int numThreads = 3; // Указываем количество потоков (по одному потоку на строку матрицы)
+        int numThreads = 3; // Указываем количество потоков 
         ExecutorService executor = Executors.newFixedThreadPool(numThreads); // Создаём пул потоков
         Future<Integer>[] results = new Future[numThreads]; // Массив для хранения результатов выполнения потоков
 
