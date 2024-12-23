@@ -35,8 +35,8 @@ public class DataManager {
     }
 
     // Загрузка данных из источника.
-    // @param source путь к файлу, из которого загружаются данные.
-    // @throws IOException если произошла ошибка при чтении файла.
+    //  путь к файлу, из которого загружаются данные.
+    // если произошла ошибка при чтении файла.
     public void loadData(String source) throws IOException {
         rawData = Files.readAllLines(Path.of(source)); // Читаем строки из файла
         System.out.println("Данные загружены: " + rawData);
@@ -46,7 +46,7 @@ public class DataManager {
      // Обработка данных.
      // Находит все методы с аннотацией @DataProcessor в зарегистрированных обработчиках
      // и запускает их параллельно с использованием потоков.
-     // @throws InterruptedException если выполнение потоков прервано.
+     //  если выполнение потоков прервано.
     public void processData() throws InterruptedException {
         for (Object processor : processors) {
             for (var method : processor.getClass().getDeclaredMethods()) {
@@ -69,8 +69,8 @@ public class DataManager {
     }
 
     // Сохранение обработанных данных в файл.
-    // @param destination путь к файлу, куда будут сохранены обработанные данные.
-    // @throws IOException если произошла ошибка при записи в файл.
+    //  путь к файлу, куда будут сохранены обработанные данные.
+    // если произошла ошибка при записи в файл.
     public void saveData(String destination) throws IOException {
         Files.write(Path.of(destination), processedData, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         System.out.println("Обработанные данные сохранены в: " + destination);
