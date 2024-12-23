@@ -5,8 +5,7 @@ import java.util.stream.Collectors;
 public class TransformProcessor {
 
      // Метод с аннотацией @DataProcessor, который выполняет трансформацию данных.
-     // @param data исходный список строк.
-     // @return список строк в верхнем регистре.
+
     @DataProcessor
     public List<String> transformData(List<String> data) {
         return data.stream() // Преобразуем список в поток данных
